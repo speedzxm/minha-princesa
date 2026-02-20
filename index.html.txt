@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minha Princesa 💖</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to top, #ff758c, #ff7eb3, #ffb199);
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 20px;
+  margin-top: 30px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.contador {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.fotos img {
+  width: 90%;
+  max-width: 300px;
+  border-radius: 20px;
+  margin: 10px 0;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  animation: fadeIn 4s ease-in-out;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  background-color: white;
+  color: #ff4e7a;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Minha Princesa 🌅💖</h1>
+
+  <p>
+    Minha namorada, meu pôr do sol, minha Laranja 🍊✨<br><br>
+    Desde 02/10/2025 minha vida ficou mais bonita.<br>
+    Cada dia ao seu lado é um capítulo novo da nossa história.<br><br>
+    Eu comecei a te amar… e hoje eu tenho certeza<br>
+    que quero continuar escrevendo tudo isso com você. 💍💖
+  </p>
+
+  <div class="contador" id="contador"></div>
+
+  <div class="fotos">
+    <img src="foto1.jpg">
+    <img src="foto2.jpg">
+    <img src="foto3.jpg">
+    <img src="foto4.jpg">
+  </div>
+
+  <button onclick="alert('Eu te amo mais que tudo ❤️')">
+    Clique aqui 💖
+  </button>
+</div>
+
+<!-- Música do YouTube -->
+<iframe 
+  src="https://www.youtube.com/embed/3JiMr-HgHJ8?autoplay=1&loop=1&playlist=3JiMr-HgHJ8"
+  frameborder="0"
+  allow="autoplay"
+  style="width:0; height:0; border:0;">
+</iframe>
+
+<script>
+function atualizarContador() {
+  const dataInicio = new Date("2025-10-02T00:00:00");
+  const agora = new Date();
+  const diferenca = agora - dataInicio;
+
+  const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+  const horas = Math.floor((diferenca / (1000 * 60 * 60)) % 24);
+  const minutos = Math.floor((diferenca / (1000 * 60)) % 60);
+  const segundos = Math.floor((diferenca / 1000) % 60);
+
+  document.getElementById("contador").innerHTML =
+    `Estamos juntos há ${dias} dias, ${horas}h ${minutos}m ${segundos}s 💖`;
+}
+
+setInterval(atualizarContador, 1000);
+</script>
+
+</body>
+</html>
